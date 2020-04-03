@@ -92,3 +92,13 @@ yarn install
  composer install --no-dev --optimize-autoloader
 
  bin/console cache:warmup --env=prod --no-debug
+
+
+
+
+ bin/console doctrine:database:create
+ bin/console doctrine:database:drop --force
+
+#Update entity
+ bin/console make:entity
+ bin/console doctrine:schema:update --force
