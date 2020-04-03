@@ -1,3 +1,13 @@
+#Run
+./install.sh
+
+
+
+
+
+
+
+
 composer create-project symfony/skeleton sfproject
 
 PhpStrom -> Preferences -> Pluggins
