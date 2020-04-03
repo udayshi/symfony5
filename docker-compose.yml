@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  symfony:
+    image: udaysh/alpine3.11.3-sf5.0:latest
+    labels:
+      - "com.lowecloud.proxy=symfony.docker"
+    volumes:
+      - "./app:/app"
+    network_mode: bridge
+
+  db:
+    image: udaysh/db_mariadb-10
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=symfony
+    network_mode: bridge
