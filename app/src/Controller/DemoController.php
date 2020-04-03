@@ -14,7 +14,15 @@ class DemoController extends AbstractController
     {
         $this->logger=$lg;
     }
+    /**
+     * @Route("/info", name="info")
+     */
+    public function info()
+    {
 
+      phpinfo();
+      exit;
+    }
     /**
      * @Route("/demo", name="demo")
      */

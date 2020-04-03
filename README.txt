@@ -30,7 +30,7 @@ composer require debug --dev
 composer require profiler --dev
 composer require maker --dev
 composer require phpunit --dev
-
+composer require doctrine
 composer require sec-checker
 
 
@@ -87,3 +87,8 @@ yarn install
   npm run build
 
 ##############################
+
+#Installing production package only
+ composer install --no-dev --optimize-autoloader
+
+ bin/console cache:warmup --env=prod --no-debug
