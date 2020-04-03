@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   symfony:
-    image: udaysh/alpine_php:latest
+    image: udaysh/alpine_sf5.dev:latest
     labels:
       - "com.lowecloud.proxy=symfony.docker"
     volumes:
