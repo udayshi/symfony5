@@ -55,7 +55,7 @@ composer unpack debug
 
 
 #Install encore (Install node and yarn)
-composer require symfony/webpack-encore-pack
+composer require encore
 yarn install
 #yarn add @symfony/webpack-encore --dev
 
