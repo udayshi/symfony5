@@ -1,2 +1,2 @@
 #!/bin/bash
-cd app/ && composer install && yarn install
+cd app/ && composer install && yarn install && bin/phpunit
