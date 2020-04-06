@@ -32,8 +32,9 @@ composer require maker --dev
 composer require phpunit --dev
 composer require doctrine
 composer require sec-checker
+composer require security-bundle
 
-
+composer require form validator
 
 composer update
 

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Demo;
 use App\Entity\DemoReference;
+use App\Form\DemoType;
 use App\Repository\DemoReferenceRepository;
 use App\Repository\DemoRepository;
 use App\Services\Logger;
@@ -11,6 +12,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class DemoController
+ * @package App\Controller
+ * @Route("/demo")
+ */
 class DemoController extends AbstractController
 {
     private $logger;
@@ -107,6 +113,19 @@ dd('Done');
 
 
         return new Response('Db action done');
+    }
+
+    /**
+     * @Route("/form", name="form")
+     */
+    public  function db_demo_form(){
+
+        $demoEntity=new Demo();
+        $form = $this->createForm('App\Form\DemoType', $demoEntity);
+
+        $data=[];
+        $data['form']=$form->createView();
+        return $this->render('demo/form.html.twig',$data);
     }
 
 

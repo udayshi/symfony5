@@ -60,5 +60,9 @@ class DemoReference
     }
 
 
+    function __toString()
+    {
+     return $this->getName();
+    }
 
 }
