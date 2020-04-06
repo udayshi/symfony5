@@ -102,3 +102,10 @@ yarn install
 #Update entity
  bin/console make:entity
  bin/console doctrine:schema:update --force
+
+ #Adding fixture
+ composer require --dev orm-fixtures
+
+ bin/console make:fixtures
+
+ bin/console  doctrine:fixtures:load
