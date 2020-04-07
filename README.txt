@@ -72,8 +72,8 @@ yarn install
 
  yarn add bootstrap@4.*
  yarn add holderjs
- yarn add popper.js@1.12.9
- yarn add jquery@4.*
+ yarn add popper.js
+ yarn add jquery@3.*
  yarn add webpack-notifier@^1.6.0 --dev
 ##############################
  #Package.json
