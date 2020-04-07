@@ -118,7 +118,7 @@ dd('Done');
     /**
      * @Route("/form", name="form")
      */
-    public  function db_demo_form(){
+    public  function demo_form(){
 
         $demoEntity=new Demo();
         $form = $this->createForm('App\Form\DemoType', $demoEntity);
@@ -126,6 +126,7 @@ dd('Done');
         //setting value in name field of form
         $form->get('name')->setData("Uday From Controller");
         $form->get('is_default')->setData(true);
+
         $data=[];
         $data['form']=$form->createView();
         return $this->render('demo/form.html.twig',$data);
