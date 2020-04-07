@@ -122,7 +122,7 @@ dd('Done');
 
         $demoEntity=new Demo();
         $form = $this->createForm('App\Form\DemoType', $demoEntity);
-
+        $form->get('item_checkbox')->setData(['N']);
         $data=[];
         $data['form']=$form->createView();
         return $this->render('demo/form.html.twig',$data);
