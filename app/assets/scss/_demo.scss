@@ -1,4 +1,54 @@
+
+
+
+$env:dev;
+$env_color:'green';
+@if $env==dev{
+  $env_color:brown;
+}@else if $env==staging{
+  $env_color:yellow;
+}@else{
+  $env_color:green;
+}
+
+
 $color: red;
 body {
   color: $color;
+  /*background-color: $env_color;*/
+
 }
+/**************************************************/
+/**Nesting*/
+nav {
+  ul {
+    margin: 0;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+  }
+}
+/**************************************************/
+/*Mixins*/
+@mixin mixin_tpl($arg) {
+  font-size:$arg;
+  font-weight: bold;
+}
+
+.heading { @include mixin_tpl(10); }
+
+/**************************************************/
+/*Extend*/
+%shared_props {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.message {
+  @extend %shared_props;
+}
+
+/**************************************************/
