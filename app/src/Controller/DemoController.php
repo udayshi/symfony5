@@ -120,12 +120,14 @@ dd('Done');
      */
     public  function demo_form(){
 
+
         $demoEntity=new Demo();
         $form = $this->createForm('App\Form\DemoType', $demoEntity);
-
-        //setting value in name field of form
-        $form->get('name')->setData("Uday From Controller");
-        $form->get('is_default')->setData(true);
+        if($form->isSubmitted() && $form->isValid()) {
+            //setting value in name field of form
+            $form->get('name')->setData("Uday From Controller");
+            $form->get('is_default')->setData(true);
+        }
 
         $data=[];
         $data['form']=$form->createView();
